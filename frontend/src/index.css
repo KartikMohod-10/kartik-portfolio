@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@media (hover: none) {
+  .group:hover {
+    transform: none !important;
+  }
+}
