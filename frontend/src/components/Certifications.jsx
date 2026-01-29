@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import { LampContainer } from "./LampContainer";
+
 
 
 export default function Certifications() {

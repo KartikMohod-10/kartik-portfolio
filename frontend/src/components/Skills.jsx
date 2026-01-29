@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-//import Hyperspeed from "./Hyperspeed";
 import MagicBento from "./MagicBento";
+import Galaxy from "./Galaxy";
 import { skills } from "./skillsData";
 
 export default function Skills() {
@@ -31,16 +31,30 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="relative min-h-screen bg-black overflow-hidden
+      className="relative min-h-screen overflow-hidden bg-black
       flex items-center justify-center px-6"
     >
-      {/* 🔥 BACKGROUND */}
-      {/*<div className="absolute inset-0">
-        <Hyperspeed />
-        <div className="absolute inset-0 bg-black/70" />
+      {/* 🌌 GALAXY BACKGROUND */}
+      <div className="absolute inset-0 z-0">
+        <Galaxy
+          mouseInteraction
+          mouseRepulsion
+          density={0.7}
+          glowIntensity={0.35}
+          saturation={0}
+          hueShift={180}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.08}
+          starSpeed={0.5}
+          speed={1}
+          transparent
+        />
       </div>
 
-      {/* CONTENT */}
+      {/* 🖤 DARK OVERLAY (for readability) */}
+      <div className="absolute inset-0 bg-black/60 z-[1]" />
+
+      {/* ⭐ CONTENT */}
       <div
         style={{
           transform: `
@@ -55,7 +69,7 @@ export default function Skills() {
         transition-all duration-300 ease-out"
       >
         {/* TITLE */}
-        <div className="text-center mb-10 pt-20">
+        <div className="text-center mb-12 pt-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             My <span className="text-cyan-400">Skills</span>
           </h2>
@@ -75,7 +89,9 @@ export default function Skills() {
           {skills.map((skill, i) => (
             <div
               key={i}
-              className="card bg-[#060010] border border-white/10
+              className="card bg-[#060010]/90
+              backdrop-blur-xl
+              border border-white/10
               rounded-2xl p-5 text-white"
             >
               <span className="text-sm text-cyan-400">
