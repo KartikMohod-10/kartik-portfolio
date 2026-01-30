@@ -1,7 +1,7 @@
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
 
-/* ================== SHADERS ================== */
+/* ================== SHADERS (UNCHANGED) ================== */
 
 const vertexShader = `
 attribute vec2 uv;
@@ -171,8 +171,11 @@ export default function Galaxy({
   const mouseActive = useRef(0);
 
   useEffect(() => {
+    if (!ref.current) return;
+
     const renderer = new Renderer({ alpha: transparent });
     const gl = renderer.gl;
+
     ref.current.appendChild(gl.canvas);
 
     const geometry = new Triangle(gl);
@@ -204,6 +207,7 @@ export default function Galaxy({
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
+      if (!ref.current) return;
       renderer.setSize(ref.current.offsetWidth, ref.current.offsetHeight);
       program.uniforms.uResolution.value.set(
         gl.canvas.width,
@@ -211,6 +215,7 @@ export default function Galaxy({
         gl.canvas.width / gl.canvas.height
       );
     };
+
     window.addEventListener("resize", resize);
     resize();
 
@@ -224,8 +229,12 @@ export default function Galaxy({
     raf = requestAnimationFrame(update);
 
     const onMove = (e) => {
+      if (!ref.current) return;
       const r = ref.current.getBoundingClientRect();
-      mouse.current = [(e.clientX - r.left) / r.width, 1 - (e.clientY - r.top) / r.height];
+      mouse.current = [
+        (e.clientX - r.left) / r.width,
+        1 - (e.clientY - r.top) / r.height
+      ];
       program.uniforms.uMouse.value.set(mouse.current);
       mouseActive.current = 1;
     };
@@ -240,7 +249,19 @@ export default function Galaxy({
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
-      ref.current.removeChild(gl.canvas);
+
+      if (mouseInteraction && ref.current) {
+        ref.current.removeEventListener("mousemove", onMove);
+        ref.current.removeEventListener("mouseleave", onLeave);
+      }
+
+      // ✅ SAFE CLEANUP
+      if (gl && gl.canvas && gl.canvas.parentNode === ref.current) {
+        ref.current.removeChild(gl.canvas);
+      }
+
+      const ext = gl.getExtension("WEBGL_lose_context");
+      ext && ext.loseContext();
     };
   }, []);
 
