@@ -74,7 +74,9 @@ export default function Certifications() {
   ];
 
   return (
-    <section className="relative bg-black  pt-10 pb-24 overflow-hidden min-h-screen">
+    <section 
+     id="certifications"
+    className="relative bg-black  pt-10 pb-24 overflow-hidden min-h-screen">
   
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">

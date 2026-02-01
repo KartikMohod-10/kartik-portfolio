@@ -2,35 +2,50 @@ import ChromaGrid from "./ChromaGrid";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "Food Delivery Website",
-      subtitle: "Full-stack food ordering platform",
-      image: "https://picsum.photos/600/400?1",
-      url: "#",
-      githubUrl: "https://github.com/KartikMohod-10"
-    },
-    {
-      title: "TextUtils Website",
-      subtitle: "Text analysis & manipulation app",
-      image: "https://picsum.photos/600/400?2",
-      url: "#",
-    githubUrl: "https://github.com/KartikMohod-10"
-    },
-    {
-      title: "News App",
-      subtitle: "Real-time news with API integration",
-      image: "https://picsum.photos/600/400?3",
-      url: "#",
-       githubUrl: "https://github.com/KartikMohod-10"
-    },
-    {
-      title: "AI Text-to-Image",
-      subtitle: "Final year AI project",
-      image: "https://picsum.photos/600/400?4",
-      url: "#",
-       githubUrl: "https://github.com/KartikMohod-10"
-    },
-  ];
+  {
+    title: "Tomato Food Delivery",
+    subtitle: "Full-stack food ordering platform",
+    image: "/projects/food-delivery.png",
+    url: "https://tomato-food-del-frontend-zzaw.onrender.com/",
+    githubUrl: "https://github.com/KartikMohod-10/Tomato_Food_Del.git",
+  },
+  {
+    title: "AI Text to Image coverter",
+    subtitle: "Final year AI-based project",
+    image: "/projects/ai-text-image.jpeg",
+    url: "#",
+    githubUrl: "https://github.com/KartikMohod-10/Text-to-image-generator.git",
+  },
+  {
+    title: "Maple Banquet Hall",
+    subtitle: "Business website with modern UI",
+    image: "/projects/maple-banquet.jpg",
+    url: "https://maple-banquet.netlify.app/",
+    githubUrl: "https://github.com/JaiPatel0916/Maple-Banquet-hall.git",
+  },
+  
+  {
+    title: "Scientific Equipment Portal",
+    subtitle: "Frontend dashboard (Vercel deployed)",
+    image: "/projects/scientific-equipment.png",
+    url: "https://scientific-equipment-frontend.vercel.app/",
+    githubUrl: "https://github.com/SanjeevaniLakade/Scientific-Equipment.git",
+  },
+  {
+    title: "Society Management Portal",
+    subtitle: "Housing society management system",
+    image: "/projects/society-portal.jpg",
+    url: "#",
+    githubUrl: "https://github.com/kshitij2201/society-manage-portal.git",
+  },
+  {
+    title: "TextUtils Website",
+    subtitle: "Text analysis & manipulation app",
+    image: "/projects/textutils.png",
+    url: "https://textutlils.vercel.app/",
+    githubUrl: "https://github.com/KartikMohod-10/Textutlils.git",
+  }, 
+];
 
   return (
     <section

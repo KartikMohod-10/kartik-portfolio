@@ -52,14 +52,26 @@ export default function Navbar() {
 
       {/* MOBILE MENU WITH SPARKLE */}
       {open && (
-        <div className="md:hidden bg-black border-b border-white/10 px-6 py-6">
-          <SparkleNavbar
-            items={navItems}
-            onItemClick={scrollTo}
-            color="#00fffc"
-          />
+        <div
+          className="
+      md:hidden
+      bg-black
+      border-b border-white/10
+      px-6 py-4
+      overflow-x-auto
+      scrollbar-hide
+    "
+        >
+          <div className="min-w-max">
+            <SparkleNavbar
+              items={navItems}
+              onItemClick={scrollTo}
+              color="#00fffc"
+            />
+          </div>
         </div>
       )}
+
     </header>
   );
 }

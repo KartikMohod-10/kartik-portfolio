@@ -108,22 +108,25 @@ const ChromaGrid = ({
                         <div className="mt-4 flex gap-3">
   {/* VIEW BUTTON */}
   <a
-    href={c.liveUrl || "#"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      flex-1 flex items-center justify-center gap-2
-      py-2 rounded-lg
-      bg-white/5 border border-white/10
-      text-white text-sm font-medium
-      transition-all
-      hover:bg-white/10
-      active:scale-95
-    "
-  >
-    <ExternalLink size={16} />
-    View
-  </a>
+  href={c.url !== "#" ? c.url : undefined}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`
+    flex-1 flex items-center justify-center gap-2
+    py-2 rounded-lg
+    text-sm font-medium
+    transition-all
+    ${
+      c.url === "#"
+        ? "bg-white/5 border border-white/10 text-gray-500 cursor-not-allowed"
+        : "bg-white/5 border border-white/10 text-white hover:bg-white/10 cursor-pointer"
+    }
+  `}
+  onClick={(e) => c.url === "#" && e.preventDefault()}
+>
+  <ExternalLink size={16} />
+  View
+</a>
 
   {/* GITHUB BUTTON */}
   <a
