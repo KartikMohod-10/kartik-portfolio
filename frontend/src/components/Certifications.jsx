@@ -29,49 +29,57 @@ export default function Certifications() {
   }, []);
 
   const certifications = [
-    {
-      title: "Design and Analysis of Algorithm",
-      desc: "NPTEL certified course focused on algorithmic thinking.",
-      org: "NPTEL",
-      icon: "🎓",
-      link: "https://drive.google.com/file/d/1E0kLzTrwhq4qGNSamVwG0kRvx31er6Id/view?usp=sharing",
-    },
-    {
-      title: "Data Analytics with Python",
-      desc: "Hands-on data analysis using Python libraries.",
-      org: "NPTEL",
-      icon: "📊",
-      link: "https://drive.google.com/file/d/1HuDEFzWnPef6ZGeIwLC0nI9chz9Bc_T8/view",
-    },
-    {
-      title: "National Service Scheme",
-      desc: "Community service and leadership program.",
-      org: "Ministry of Youth Affairs & Sports",
-      icon: "🏆",
-      link: "https://drive.google.com/file/d/1CwKF53ZaiViloCeRJQB_hP9Fa17TsTQJ/view?usp=drive_link",
-    },
-    {
-      title: "MongoDB Course",
-      desc: "NoSQL database fundamentals and queries.",
-      org: "GeeksforGeeks",
-      icon: "🍃",
-      link: "https://drive.google.com/file/d/1iI7w_q2ESvcOxOf3Mmlio1yp97sAUjV7/view?usp=drive_link",
-    },
-    {
-      title: "Google Cloud Study Jam",
-      desc: "Cloud fundamentals with hands-on labs.",
-      org: "Google Cloud",
-      icon: "☁️",
-      link: "https://drive.google.com/file/d/1Tcx1WViM9b66dywEfQHRhfI7TLI1rIJM/view?usp=drive_link",
-    },
-    {
-      title: "Figma Bootcamp",
-      desc: "UI/UX design and prototyping skills.",
-      org: "Design Certification",
-      icon: "🎨",
-      link: "https://drive.google.com/file/d/1YzUkRBPJr0ibN21YVNshdMZUBJEPjKtW/view?usp=drive_link",
-    },
-  ];
+  {
+    title: "TCS iON Career Edge – Young Professional",
+    desc: "Industry-oriented professional skills program covering communication, resume writing, interview skills, IT fundamentals, and AI basics.",
+    org: "TCS iON (Tata Consultancy Services)",
+    icon: "💼",
+    link: "https://drive.google.com/file/d/1Fo6nNACEIHYKvKsD9sOMuowBskJimFop/view?usp=sharing",
+  },
+  {
+    title: "Big Data Computing (Elite)",
+    desc: "NPTEL certified course on big data concepts and distributed computing with an Elite score of 81%.",
+    org: "NPTEL · IIT Kanpur",
+    icon: "📈",
+    link: "https://drive.google.com/file/d/1LJPZ9zIOl593HgLDsUw9xBlwdyLvhOmP/view?usp=sharing",
+  },
+  {
+    title: "Design and Analysis of Algorithm",
+    desc: "NPTEL certified course focused on algorithmic thinking and problem-solving techniques.",
+    org: "NPTEL . IIT Madras",
+    icon: "🎓",
+    link: "https://drive.google.com/file/d/1E0kLzTrwhq4qGNSamVwG0kRvx31er6Id/view?usp=sharing",
+  },
+  {
+    title: "Data Analytics with Python",
+    desc: "Hands-on data analysis using Python libraries such as NumPy, Pandas, and Matplotlib.",
+    org: "NPTEL . IIT Roorkee",
+    icon: "📊",
+    link: "https://drive.google.com/file/d/1HuDEFzWnPef6ZGeIwLC0nI9chz9Bc_T8/view",
+  },
+  {
+    title: "National Service Scheme (NSS)",
+    desc: "Community service and leadership development program under the Government of India.",
+    org: "Ministry of Youth Affairs & Sports",
+    icon: "🏆",
+    link: "https://drive.google.com/file/d/1CwKF53ZaiViloCeRJQB_hP9Fa17TsTQJ/view?usp=drive_link",
+  },
+  {
+    title: "MongoDB Course",
+    desc: "Fundamentals of NoSQL databases, MongoDB queries, and data modeling.",
+    org: "GeeksforGeeks",
+    icon: "🍃",
+    link: "https://drive.google.com/file/d/1iI7w_q2ESvcOxOf3Mmlio1yp97sAUjV7/view?usp=drive_link",
+  },
+  {
+    title: "Google Cloud Study Jam",
+    desc: "Cloud fundamentals with hands-on labs using Google Cloud Platform services.",
+    org: "Google Cloud",
+    icon: "☁️",
+    link: "https://drive.google.com/file/d/1Tcx1WViM9b66dywEfQHRhfI7TLI1rIJM/view?usp=drive_link",
+  },
+];
+
 
   return (
     <section 
