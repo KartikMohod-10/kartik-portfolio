@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   const words = [
-    { text: "Hy!", className: "text-cyan-400" },
+    { text: "Hi!", className: "text-cyan-400" },
     { text: "I" },
     { text: "Am" },
     { text: "Kartik", className: "text-cyan-400" },
@@ -96,7 +96,7 @@ export default function Hero() {
               inline-block
             "
           >
-            Check My Resume
+            Check My Resume →
           </motion.a>
         </div>
       </div>
