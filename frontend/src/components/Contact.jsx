@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-black px-5 sm:px-6 py-20 overflow-hidden pt-12"
+      className="relative bg-black px-5 sm:px-6 py-20 overflow-hidden pt-14"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#070012] via-black to-[#020024]" />

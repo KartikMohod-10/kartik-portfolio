@@ -15,18 +15,33 @@ const navItems = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  // ✅ FIXED SCROLL (mobile + deployment safe)
   const scrollTo = (id) => {
     setOpen(false);
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
+
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const navbarHeight = 80; // fixed navbar height
+      const y =
+        el.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }, 100); // wait for mobile menu close
   };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      <nav className="w-full px-6 py-4 flex items-center justify-between
-        bg-black/70 backdrop-blur-md border-b border-white/10">
-
+      <nav
+        className="w-full px-6 py-4 flex items-center justify-between
+        bg-black/70 backdrop-blur-md border-b border-white/10"
+      >
         {/* LOGO */}
         <h1 className="text-xl font-bold text-white">
           Kartik<span className="text-cyan-500">.</span>
@@ -50,17 +65,17 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* MOBILE MENU WITH SPARKLE */}
+      {/* MOBILE MENU WITH HORIZONTAL SCROLL */}
       {open && (
         <div
           className="
-      md:hidden
-      bg-black
-      border-b border-white/10
-      px-6 py-4
-      overflow-x-auto
-      scrollbar-hide
-    "
+            md:hidden
+            bg-black
+            border-b border-white/10
+            px-6 py-4
+            overflow-x-auto
+            scrollbar-hide
+          "
         >
           <div className="min-w-max">
             <SparkleNavbar
@@ -71,7 +86,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-
     </header>
   );
 }
