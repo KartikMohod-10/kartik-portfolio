@@ -21,7 +21,7 @@ export default function Projects() {
     subtitle: "Business website with modern UI",
     image: "/projects/maple-banquet.jpg",
     url: "https://maple-banquet.netlify.app/",
-    githubUrl: "https://github.com/JaiPatel0916/Maple-Banquet-hall.git",
+    githubUrl: "",
   },
   
   {
@@ -29,7 +29,7 @@ export default function Projects() {
     subtitle: "Frontend dashboard (Vercel deployed)",
     image: "/projects/scientific-equipment.png",
     url: "https://scientific-equipment-frontend.vercel.app/",
-    githubUrl: "https://github.com/SanjeevaniLakade/Scientific-Equipment.git",
+    githubUrl: "",
   },
   {
     title: "Society Management Portal",
