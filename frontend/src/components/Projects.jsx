@@ -26,14 +26,14 @@ export default function Projects() {
   
   {
     title: "Scientific Equipment Portal",
-    subtitle: "Frontend dashboard (Vercel deployed)",
+    subtitle: "A professional web portal designed for displaying and managing scientific laboratory equipment.",
     image: "/projects/scientific-equipment.png",
     url: "https://scientific-equipment-frontend.vercel.app/",
     githubUrl: "",
   },
   {
     title: "Society Management Portal",
-    subtitle: "Housing society management system",
+    subtitle: "A web-based housing society management system that streamlines daily operations of residential societies.",
     image: "/projects/society-portal.jpg",
     url: "#",
     githubUrl: "https://github.com/kshitij2201/society-manage-portal.git",
