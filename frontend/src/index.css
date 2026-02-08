@@ -22,3 +22,56 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+/* ================= GLOWING SKILL CARD ================= */
+
+.glowing-card {
+  position: relative;
+}
+
+/* moving dot */
+.glow-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #22d3ee;
+  box-shadow: 0 0 18px currentColor;
+  animation:
+    border-follow 6s linear infinite,
+    glow-color 6s linear infinite;
+  z-index: 20;
+}
+
+/* animated border */
+.glow-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  pointer-events: none;
+  animation: border-color 6s linear infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes border-follow {
+  0%   { top: 0; left: 0; }
+  25%  { top: 0; left: 100%; transform: translateX(-100%); }
+  50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+  75%  { top: 100%; left: 0; transform: translateY(-100%); }
+  100% { top: 0; left: 0; }
+}
+
+@keyframes border-color {
+  0%   { border-color: #ee4122; }
+  33%  { border-color: #0a0dcf; }
+  66%  { border-color: #a9f123; }
+  100% { border-color: #22cfee; }
+}
+
+@keyframes glow-color {
+  0%   { color: #22d3ee; }
+  33%  { color: #6366f1; }
+  66%  { color: #55f755; }
+  100% { color: #ee2222; }
+}

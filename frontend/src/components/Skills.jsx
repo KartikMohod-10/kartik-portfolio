@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import MagicBento from "./MagicBento";
 import Galaxy from "./Galaxy";
 import { skills } from "./skillsData";
+import GlowingSkillCard from "./GlowingSkillCard";
 
 export default function Skills() {
   const ref = useRef(null);
   const [progress, setProgress] = useState(0);
 
-  /* ---------- PARALLAX SCROLL ---------- */
   useEffect(() => {
     const handleScroll = () => {
       if (!ref.current) return;
@@ -31,10 +30,13 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-black
-      flex items-center justify-center px-6"
+      className="
+        relative min-h-screen overflow-hidden
+        bg-black px-6
+        flex items-center justify-center
+      "
     >
-      {/* 🌌 GALAXY BACKGROUND */}
+      {/* 🌌 BACKGROUND */}
       <div className="absolute inset-0 z-0">
         <Galaxy
           mouseInteraction
@@ -51,10 +53,10 @@ export default function Skills() {
         />
       </div>
 
-      {/* 🖤 DARK OVERLAY (for readability) */}
+      {/* overlay */}
       <div className="absolute inset-0 bg-black/60 z-[1]" />
 
-      {/* ⭐ CONTENT */}
+      {/* CONTENT */}
       <div
         style={{
           transform: `
@@ -65,11 +67,14 @@ export default function Skills() {
           `,
           opacity: progress,
         }}
-        className="relative z-10 w-full max-w-6xl
-        transition-all duration-300 ease-out"
+        className="
+          relative z-10 w-full
+          max-w-[1440px]
+          transition-all duration-300
+        "
       >
         {/* TITLE */}
-        <div className="text-center mb-12 pt-20">
+        <div className="text-center mb-14 pt-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             My <span className="text-cyan-400">Skills</span>
           </h2>
@@ -78,34 +83,26 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* MAGIC BENTO GRID */}
-        <MagicBento
-          enableSpotlight
-          enableStars
-          enableBorderGlow
-          enableMagnetism
-          glowColor="0,240,255"
+        {/* 🔥 GRID (FIXED) */}
+        <div
+          className="
+            grid gap-8
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            justify-items-center
+          "
         >
           {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="card bg-[#060010]/90
-              backdrop-blur-xl
-              border border-white/10
-              rounded-2xl p-5 text-white"
-            >
-              <span className="text-sm text-cyan-400">
-                {skill.label}
-              </span>
-              <h3 className="mt-2 text-lg font-semibold">
-                {skill.title}
-              </h3>
-              <p className="mt-2 text-sm text-gray-400">
-                {skill.description}
-              </p>
+            <div key={i} className="w-full max-w-[340px]">
+              <GlowingSkillCard
+                label={skill.label}
+                title={skill.title}
+                description={skill.description}
+              />
             </div>
           ))}
-        </MagicBento>
+        </div>
       </div>
     </section>
   );
