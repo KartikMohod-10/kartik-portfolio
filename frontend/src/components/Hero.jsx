@@ -82,7 +82,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
-            href="https://drive.google.com/file/d/1QfKngrXb27qTQTtjfen1FthtlEFGld34/view?usp=sharing"
+            href="https://drive.google.com/file/d/1I-pbZP41cJwunfvzJkhlbgA0H4lm69KB/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="
