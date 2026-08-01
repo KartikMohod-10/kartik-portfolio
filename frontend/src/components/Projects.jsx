@@ -17,6 +17,13 @@ export default function Projects() {
     githubUrl: "https://github.com/KartikMohod-10/Text-to-image-generator.git",
   },
   {
+  title: "RepoPilot AI",
+  subtitle: "AI-powered repository analysis & coding assistant",
+  image: "/projects/repopilot.png",
+  url: "https://ai-coding-agent-with-ui-6axo.vercel.app/",
+  githubUrl: "https://github.com/KartikMohod-10/ai-coding-agent-with-ui",
+ },
+  {
     title: "Maple Banquet Hall",
     subtitle: "Business website with modern UI",
     image: "/projects/maple-banquet.jpg",
