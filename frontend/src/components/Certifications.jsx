@@ -78,8 +78,21 @@ export default function Certifications() {
     icon: "☁️",
     link: "https://drive.google.com/file/d/1Tcx1WViM9b66dywEfQHRhfI7TLI1rIJM/view?usp=drive_link",
   },
+  {
+  title: "Oracle Cloud Infrastructure Generative AI Professional",
+  desc: "Earned Oracle Cloud Infrastructure Generative AI Professional certification, covering AI fundamentals, LLMs, prompt engineering, and Generative AI services on OCI.",
+  org: "Oracle",
+  icon: "🤖",
+  link: "https://drive.google.com/file/d/1S3PVHpqvSHJ83gd0CwNlLbuqCme3wE_I/view",
+},
+{
+  title: "Microsoft Excel – Beginner to Advanced",
+  desc: "Completed comprehensive Microsoft Excel training covering formulas, functions, PivotTables, charts, data analysis, dashboards, and advanced Excel features.",
+  org: "Skill Course",
+  icon: "📊",
+  link: "https://drive.google.com/file/d/1r6LrTZs6mfZXPVqN-rQUgWvCOb45rf5Z/view",
+},
 ];
-
 
   return (
     <section 
@@ -94,6 +107,7 @@ export default function Certifications() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             Professional certifications and achievements that highlight my
             continuous learning and technical growth.
+            <p>Tap to view the certificate</p>
           </p>
         </div>
 
