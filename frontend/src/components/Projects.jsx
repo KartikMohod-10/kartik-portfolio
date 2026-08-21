@@ -17,6 +17,13 @@ export default function Projects() {
     githubUrl: "https://github.com/KartikMohod-10/Text-to-image-generator.git",
   },
   {
+    title: "Task Management App",
+    subtitle: "A modern, full-stack task management platform for organizing projects, tasks, subtasks, priorities, deadlines, and team assignments — with secure authentication and a responsive dashboard.",
+    image: "/projects/Task_mangement_system.png",
+    url: "https://pyramid-6rxb.onrender.com",
+    githubUrl: "https://github.com/KartikMohod-10/Task_Managment_app.git",
+  },
+  {
   title: "RepoPilot AI",
   subtitle: "AI-powered repository analysis & coding assistant",
   image: "/projects/repopilot.png",
