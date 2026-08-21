@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-// import Galaxy from "./Galaxy";
+ import Galaxy from "./Galaxy";
 import { skills } from "./skillsData";
 import GlowingSkillCard from "./GlowingSkillCard";
 
